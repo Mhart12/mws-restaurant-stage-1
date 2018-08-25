@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Normalize.css for better cross-browser consistency -->
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
     <!-- Main CSS file -->
@@ -13,13 +15,13 @@
 
 <body class="inside">
     <!-- Beginning header -->
-    <header>
+    <header role="banner">
         <!-- Beginning nav -->
         <nav>
             <h1><a href="/">Restaurant Reviews</a></h1>
         </nav>
         <!-- Beginning breadcrumb -->
-        <ul id="breadcrumb">
+        <ul id="breadcrumb" role="navigation" aria-label="breadcrumb">
             <li><a href="/">Home</a></li>
         </ul>
         <!-- End breadcrumb -->
@@ -27,14 +29,14 @@
     </header>
     <!-- End header -->
     <!-- Beginning main -->
-    <main id="maincontent">
+    <main id="maincontent" role="main">
         <!-- Beginning map -->
-        <section id="map-container">
+        <section id="map-container" role="application" aria-label="Google Map">
             <div id="map"></div>
         </section>
         <!-- End map -->
         <!-- Beginning restaurant -->
-        <section id="restaurant-container">
+        <section id="restaurant-container" aria-labelledby="restaurant-name">
             <h1 id="restaurant-name"></h1>
             <img id="restaurant-img">
             <p id="restaurant-cuisine"></p>
@@ -43,14 +45,14 @@
         </section>
         <!-- end restaurant -->
         <!-- Beginning reviews -->
-        <section id="reviews-container">
+        <section id="reviews-container" aria-label="Reviews">
             <ul id="reviews-list"></ul>
         </section>
         <!-- End reviews -->
     </main>
     <!-- End main -->
     <!-- Beginning footer -->
-    <footer id="footer">
+    <footer id="footer" role="contentinfo">
         Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
     <!-- End footer -->
@@ -67,3 +69,4 @@
 </body>
 
 </html>
+Add a ServiceWorker script to cache requests to all of the site’s assets so that any page that has been visited by a user will be accessible when the user is offline. Only caching needs to be implemented, no other ServiceWorker features.
