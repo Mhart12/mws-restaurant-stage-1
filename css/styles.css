@@ -21,18 +21,18 @@ ul, li {
 }
 
 a {
-    color: orange;
+    color: darkorange;
     text-decoration: none;
 }
 
-    a:hover, a:focus {
-        color: #3397db;
-        text-decoration: none;
-    }
+a:hover, a:focus {
+    color: #5BABE2;
+    text-decoration: none;
+}
 
-    a img {
-        border: none 0px #fff;
-    }
+a img {
+    border: none 0px #fff;
+}
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Arial, Helvetica, sans-serif;
