@@ -88,7 +88,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
-  image.alt = '${restaurant.name} image';
+  image.alt = `${restaurant.name} restaurant, ${restaurant.shortDesc}`;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
